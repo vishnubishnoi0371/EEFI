@@ -355,7 +355,15 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
   }
-
+  .audited_bottom_line::after {
+    position: absolute;
+    content: "";
+    width: 178px;
+    height: 1px;
+    background-color: white;
+    bottom: 4px;
+    left: 0;
+  }
 /* amplify section */
 .amplify-bg{
     background-image: url("../images/webp/small-bulls.png");
@@ -493,14 +501,17 @@ color: var(--blue-dark) !important;
   width: 45px;
   height: 45px;
 }
+ @media (min-width:2000px) {
+  .min_vh_90{
+    min-height: unset !important;
+  }
+ }
  @media (min-width:1500px) {
 
   .min-vh-100{
     min-height: unset !important;
   }
-  .min_vh_90{
-    min-height: unset !important;
-  }
+ 
   .img_cloud{
     bottom: 11% !important;
     display: none;

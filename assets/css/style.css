@@ -11,7 +11,7 @@
     --fs-2lg: 38px;
     --fs-xl: 46px;
     --fs-2xl: 52px;
-    --fs-6xl: 55px;
+    --fs-6xl: 72px;
   
     /*-----------line-height----------*/
     --lh-xs: 112.6%;
@@ -35,7 +35,11 @@
     
     
   }
-
+body{
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
   .lh_xsm {
     line-height: var(--lh-xsm);
@@ -156,14 +160,17 @@
     text-decoration: none !important;
     box-sizing: border-box;
 }
+.mw_tokenomics{
+  max-width: 240px;
+}
 .pt_30{
     padding-top: 30px;
   }
   .mw_440{
     max-width: 440px;
   }
-  .mw_448{
-    max-width: 448px;
+  .mw_eefi{
+    max-width: 100%;
   }
   .mb_20{
     margin-bottom: 20px;
@@ -218,15 +225,60 @@
   .nav_line:hover::after {
     width: 100%;
   }
+  /* dropdown */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--blue);
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    width: 120px;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+    width: 100px !important;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    width: 100px !important;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--blue);
+    width: 100px !important;
+}
+
+.dropdown.open .dropdown-menu {
+  width: 100px !important;
+    display: block;
+}
+
   
 /*--header-*/
 .hero_bg {
     background-image: url(/assets/images/webp/header-bg.webp);
     background-size: cover;
-    background-position: center;
+    background-position: start;
     background-repeat: no-repeat;
     width: 100%;
   }
+  .hero_bg::after{
+    position: absolute;
+    background: linear-gradient(179.27deg, #1643C3 0.63%, #000000 175.69%);
+    opacity: 74%;
+    bottom: 0;
+        content: "";
+        top:0;
+        left: 0;
+        right: 0;
+        mix-blend-mode: color;
+    }
   
   .mb_30 {
     margin-bottom: 30px;
@@ -240,9 +292,12 @@
     border-radius: 8px;
     color: var(--blue);
     transition: all 300ms linear;
+    position: relative;
+    z-index: 5;
   }
   .nav_btn:hover {
-    box-shadow: 0 8px 16px 0 #1644c354, 0 6px 20px 0 #1644c346;
+    background: var(--blue-dark) !important;
+    color: white;
   }
   
   .mt_100 {
@@ -297,14 +352,14 @@
   }
 
 .mw_738{
-    max-width: 738px;
+    max-width: 775px;
 }
-.custom_width{
+/* .custom_width{
     width: 350px;
   }  
   .custom_width_1{
     max-width: 1000px;
-  } 
+  }  */
 .toke_graph{
     background-image: url("../images/webp/graph-bg.webp");
     background-position: center;
@@ -391,10 +446,25 @@
   .mb_23 {
     margin-bottom: 23px;
   }
- /* ellipse */
 
-
+.toke_svg{
+  width: 45px;
+  height: 45px;
+}
+ @media (min-width:1500px) {
+  .min-vh-100{
+    min-height: unset !important;
+  }
+  .min_vh_90{
+    min-height: unset !important;
+  }
+  .img_cloud{
+    bottom: 11% !important;
+    display: none;
+  }
+ }
  @media (min-width:1200px) {
+  
   .img_cloud{
     z-index: 2;
     position: absolute;
@@ -444,6 +514,22 @@
     }
   }
   @media (min-width:992px) {
+    .custom_width{
+      width: 425px !important;
+    }  
+    .custom_width_1{
+      max-width: 1000px;
+    }
+    .hero_bg {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+    .toke_svg{
+      width: 112px;
+      height: 112px;
+    }
     :root {
         --fs-6xl: 85px;
         --fs-xl: 52px;
@@ -459,15 +545,20 @@
       }
   }
   @media (min-width:768px) {
+    .mw_tokenomics{
+      max-width: 340px;
+    }
+    .mw_185{
+      max-width: unset;
+    }
+    .toke_svg{
+      width: 80px;
+      height: 80px;
+    }
     .img_cloud{
       bottom: -6%;
     }
-    .custom_width{
-        width: 425px !important;
-      }  
-      .custom_width_1{
-        max-width: 1000px;
-      } 
+   
   
     :root {
       --fs-xxl: 72px;
@@ -479,80 +570,79 @@
     }
   
   }
-@media (max-width: 991.98px) {
+  @media (max-width: 991.98px) {
+  
     .menu-icon {
-      width: 35px;
-      height: 30px;
-      background: transparent;
-      border-radius: 15px !important;
-      position: relative;
-      z-index: 5;
-      transition: all .3s linear;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-direction: column;
+        width: 35px;
+        height: 30px;
+        background: transparent;
+        border-radius: 15px !important;
+        position: relative;
+        z-index: 5;
+        transition: all .3s linear;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
     }
-  
+
     .menu-icon span {
-      width: 100%;
-      height: 5px;
-      background: white;
-      transition: all .3s linear;
+        width: 100%;
+        height: 5px;
+        background: white;
+        transition: all .3s linear;
     }
-  
+
     .nav_bar {
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: -100%;
-      min-height: 100vh;
-      position: fixed;
-      display: flex;
-      z-index: 4;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #1643C3;
-      transition: .3s linear;
-      padding-left: 0 !important;
-      transition: all 300ms linear;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        min-height: 100vh;
+        position: fixed;
+        display: flex;
+        z-index: 4;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #1643C3;
+        transition: .3s linear;
+        padding-left: 0 !important;
+        transition: all 300ms linear;
     }
-  
+
     .left_true {
-      left: 0;
+        left: 0;
     }
-  
+
     .left_false {
-      left: -100%;
+        left: -100%;
     }
-  
+
     .d-none {
-      display: none;
+        display: none;
     }
-  
+
     .d-block {
-      display: block;
+        display: block;
     }
-  
+
     .crossline1 .naviconline1 {
-      transform: rotate(45deg) translate(12px, 12px);
+        transform: rotate(45deg) translate(12px, 12px);
     }
-  
+
     .crossline1 .naviconline2 {
-      opacity: 0;
+        opacity: 0;
     }
-  
+
     .crossline1 .naviconline3 {
-      transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(5px, -5px);
     }
-  
+
     .nav_btn {
-      padding: 16px 29.5px;
-      border: 2px solid #ffffff;
-      border-radius: 8px;
-      color: #ffffff;
+        padding: 16px 29.5px;
+        border: 2px solid #ffffff;
+        border-radius: 8px;
+        color: #ffffff;
     }
-  
-  
-  }
+}

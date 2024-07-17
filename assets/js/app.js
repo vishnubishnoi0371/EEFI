@@ -15,18 +15,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.getElementById("menuIcon").addEventListener("click", function () {
-    this.classList.toggle("crossline1");
-    document.querySelector(".nav_bar").classList.toggle("left_false");
-    document.querySelector(".nav_bar").classList.toggle("left_true");
-    document.querySelector(".nav_bar").classList.toggle("d-none");
-});
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function () {
+  scrollFunction();
+};
 
-document.querySelectorAll(".nav_bar li").forEach(function (li) {
-    li.addEventListener("click", function () {
-        document.getElementById("menuIcon").classList.toggle("crossline1");
-        document.querySelector(".nav_bar").classList.toggle("left_false");
-        document.querySelector(".nav_bar").classList.toggle("left_true");
-        document.querySelector(".nav_bar").classList.toggle("d-none");
-    });
-});
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

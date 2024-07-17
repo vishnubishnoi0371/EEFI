@@ -347,7 +347,7 @@ body{
 /* tokononics */
 
 .py_tokenomics {
-    padding-top: 78px;
+    padding-top: 108px;
     padding-bottom: 92px;
   }
 
@@ -538,7 +538,7 @@ body{
     .img_cloud{
       z-index: 2;
       position: absolute;
-      bottom: -8% !important;
+      bottom: -11% !important;
     }
       .col_width{
         width: 50%;

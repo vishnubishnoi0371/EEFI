@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" href="./assets/images/webp/favicon.webp">
     <title> EEFI</title>
@@ -12,86 +16,113 @@
 
 <body>
     <!-- header -->
+    <section class="hero_bg  min_vh_90 position-relative">
 
-    <div class="min-vh-100 bg-hero  bg-blue d-flex flex-column position-relative pt-3">
-        <img class="position-absolute dot-img" src="dotssss.webp" alt="">
-        <nav class="z-3">
-            <div class="container  d-flex align-items-center justify-content-between">
-                <img class="page-logo pointer z-3  position-relative" src="./assets/images/webp/logo.webp" alt="logo">
-                <label id="menuIcon">
-                    <div class="line-wrapper">
-                        <span class="cross-4"></span>
-                        <span class="cross-5"></span>
-                        <span class="cross-6"></span>
+        <!-- <img class="position-absolute top-0 start-0 w-100 h-100 z-3" src="./assets/images/webp/header-layer.png" alt=""> -->
+        <div class="gap-4 flex-column position-absolute z-2 blue_dots_set d-md-flex ">
+            <span class="blue_dots"></span>
+            <span class="blue_dots"></span>
+            <span class="blue_dots"></span>
+            <span class="blue_dots"></span>
+            <span class="blue_dots"></span>
+        </div>
+        <nav class="container px-3">
+            <div class="d-flex justify-content-between align-items-center pt-1">
+                <a href="" aria-label="Navlogo">
+                    <img src="/assets/images/webp/logo.webp" alt="navLogo" class="">
+                </a>
+                <div class="d-flex nav_gap align-items-center">
+                    <ul class="nav_bar left_false d-none d-lg-flex">
+                        <li>
+                            <a href="#about"
+                                class="text-white ff_raleway  fw-medium nav_line position-relative">About</a>
+                        </li>
+                        <li>
+                            <a href="#ibo"
+                                class="text-white ff_raleway  fw-medium text-nowrap nav_line position-relative">IBO
+                                Event</a>
+                        </li>
+                        <li>
+                            <a href="#eefi"
+                                class="text-white ff_raleway  fw-medium text-nowrap nav_line position-relative">EEFI
+                                Tokenomics</a>
+                        </li>
+                        <li>
+                            <a href="#team" class="text-white ff_raleway  fw-medium nav_line position-relative">Team</a>
+                        </li>
+                        <li>
+                            <a href="#partner"
+                                class="text-white ff_raleway  fw-medium nav_line position-relative">Partners</a>
+                        </li>
+                        <li>
+                            <a href="#roadmap"
+                                class="text-white ff_raleway  fw-medium nav_line position-relative">Roadmap</a>
+                        </li>
+                        <li>
+                            <a href="#more"
+                                class="text-white d-flex align-items-center gap-1 ff_raleway  fw-medium nav_line position-relative">More
+                                <span><svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.8027 6.20992C11.6711 6.06997 11.5037 6 11.3004 6C11.0972 6 10.9297 6.06997 10.7982 6.20992L8 9.18702L5.20179 6.20992C5.07025 6.06997 4.90284 6 4.69955 6C4.49626 6 4.32885 6.06997 4.19731 6.20992C4.06577 6.34987 4 6.52799 4 6.74427C4 6.96056 4.06577 7.13867 4.19731 7.27862L7.49776 10.7901C7.56951 10.8664 7.64723 10.9206 7.73094 10.9527C7.81465 10.9847 7.90433 11.0005 8 11C8.09566 11 8.18535 10.984 8.26906 10.9519C8.35277 10.9198 8.43049 10.8659 8.50224 10.7901L11.8027 7.27862C11.9342 7.13867 12 6.96056 12 6.74427C12 6.52799 11.9342 6.34987 11.8027 6.20992Z"
+                                            fill="white" />
+                                    </svg>
+                                </span></a>
+                        </li>
+                        <button aria-label="enterbtn"
+                            class="nav_btn  fw-medium ff_raleway bg-transparent text-nowrap d-md-none d-block">Enter
+                            App</button>
+                    </ul>
+                    <div class="menu-icon d-lg-none" id="menuIcon">
+                        <span class="naviconline1"></span>
+                        <span class="naviconline2"></span>
+                        <span class="naviconline3"></span>
                     </div>
-                </label>
+                    <button aria-label="enterbtn"
+                        class="nav_btn  fw-medium text_blue ff_raleway bg-transparent text-nowrap d-md-block d-none">Enter
+                        App</button>
 
-                <ul class="nav-flip d-none d-md-flex flex-column text-center flex-lg-row gap-25 mb-0">
-                    <li><a href="#" class="ff-raleway  fw-medium text-white position-relative headline">About</a></li>
-                    <li><a href="#" class="ff-raleway  fw-medium text-white position-relative headline">IBO Event</a>
-                    </li>
-                    <li><a href="#" class="ff-raleway  fw-medium text-white position-relative headline">EEFI
-                            Tokenomics</a></li>
-                    <li><a href="#" class="ff-raleway  fw-medium text-white position-relative headline">Team</a></li>
-                    <li><a href="#" class="ff-raleway  fw-medium text-white position-relative headline">Partners</a>
-                    </li>
-                    <li><a href="#" class="ff-raleway  fw-medium text-white position-relative headline">Roadmap</a></li>
-                    <li><a href="#"
-                            class="ff-raleway d-flex align-items-center gap-5  fw-medium text-white position-relative headline">More
-                            <span><svg width="8" height="5" viewBox="0 0 8 5" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M7.80269 0.209923C7.67115 0.0699741 7.50374 0 7.30045 0C7.09716 0 6.92975 0.0699741 6.79821 0.209923L4 3.18702L1.20179 0.209923C1.07025 0.0699741 0.90284 0 0.699551 0C0.496263 0 0.328849 0.0699741 0.197309 0.209923C0.0657695 0.349872 0 0.527988 0 0.744273C0 0.960557 0.0657695 1.13867 0.197309 1.27862L3.49776 4.79006C3.56951 4.8664 3.64723 4.9206 3.73094 4.95266C3.81465 4.98472 3.90433 5.0005 4 4.99999C4.09566 4.99999 4.18535 4.98396 4.26906 4.9519C4.35277 4.91984 4.43049 4.86589 4.50224 4.79006L7.80269 1.27862C7.93423 1.13867 8 0.960557 8 0.744273C8 0.527988 7.93423 0.349872 7.80269 0.209923Z"
-                                        fill="white" />
-                                </svg>
-                            </span></a></li>
-                    <button
-                        class="enter-button bg-transparent blue ff-raleway fw-medium px-31 py-3 lh-normal  d-lg-none d-block ms-5">Enter
-                        App</button>
-                </ul>
-                <div class="ml-100 d-flex align-items-center justify-content-between">
-                    <button
-                        class="enter-button bg-transparent blue ff-raleway fw-medium px-31 py-3 lh-normal  d-none d-lg-block ms-5">Enter
-                        App</button>
                 </div>
             </div>
         </nav>
-
-
-        <section class="" id="About">
-            <div class="container ">
-                <div class="row align-items-center pb-5 pb-sm-0 mb-sm-0 mb-lg-5 pb-xl-0 mb-xl-0">
-                    <div class="col-xl-5 pt-4">
-                        <h1 class="font-neueregular fs-lgxl fs-6xl fw-medium text-white text-uppercase">Building <span
-                                class="d-lg-block">elastic</span> <span class="d-lg-block">Protocol</span></h1>
-                        <p class="ff-raleway  fw-normal text-white pt-3 pt-md-2 pt-lg-0">An ecosystem of unique
-                            yield
-                            strategies that help you earn yield, <span class="d-sm-block">amplify, and stretch it across
-                                all market conditions</span></p>
-                        <div class="position-relative linee">
-                            <p
-                                class="ff-raleway fw-700 fs-18 text-decoration-underline text-white pt-3 pt-lg-2 pt-lg-0">
-                                Audited by
-                                Omniscia</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-7">
-                        <img class="w-100 hero-img " src="./assets/images/webp/robot.webp" alt="robots">
-                    </div>
+        <div id="about" class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12 mt_100">
+                    <h1
+                        class="text-white text-uppercase text-lg-start text-center font-neueregular fs_6xl lh_xs mb_30 fw-medium">
+                        Building
+                        elastic
+                        Protocol</h1>
+                    <p
+                        class="fw-normal text-lg-start mx-auto mx-lg-0 text-center text-white ff_raleway text-capitalize lh_lg mw_524 mb-4">
+                        An
+                        ecosystem of unique yield
+                        strategies that help you earn yield, amplify, and stretch it across all market conditions
+                    </p>
+                    <a href="#"
+                        class="d-flex justify-content-lg-start justify-content-center text-white ff_raleway fw-bold fs_md text-decoration-underline">Audited
+                        by
+                        Omniscia</a>
                 </div>
+                <div class="col-lg-6 col-12 mt-4 mt-sm-5 mt-lg-0">
+                    <img src="/assets/images/webp/robot.webp" alt="heroRobote" class="translate_hero_img w-100">
+
+                </div>
+
             </div>
-        </section>
-    </div>
+
+        </div>
+    </section>
     <!-- amplify section -->
-    <div class="position-relative ">
-        <div class="amplify-bg">
+    <div id="ibo" class="position-relative ">
+        <div class="amplify-bg min_vh_90 d-none d-md-block">
             <div class="text-center py-3">
-                <h2 class="ff-plus fs-xxl fs-4xl fw-bolder text-white">
+                <h2 class="ff-plus fs_xl fw-bolder text-white">
                     Amplify and <span class="text-uppercase">stretch gains</span>
                 </h2>
             </div>
             <div class="container d-flex flex-column justify-content-center min-vh-100">
-                <p class="text-center fs-xs fw-normal mx-auto text-white ff-raleway  mw-555">
+                <p class="text-center fs-xs fw-normal mx-auto text-white  ff-raleway  mw_555">
                     We take a different balanced approach to finding and creating yield opportunities in the
                     everchanging crypto market. Our yield strategies help users stay protected and hedged during bear
                     markets and amplify yield during bull markets without resorting to leverage or other dangerous
@@ -100,134 +131,244 @@
             </div>
 
         </div>
-        <img class="w-100 img-cloud" src="./assets/images/webp/Clouds.webp" alt="Clouds">
+        <div class=" d-md-none ">
+            <div class=" bg-black w-100 mt-32pb-0 text-center">
+                <h2 class="ff_machina fs-3xl fw-bolder mb-0 text-white pt-sm-2">Amplify and <span
+                        class="text-uppercase">stretch
+                        gains</span></h2>
+            </div><img class="w-100" src="/assets/images/webp/bulls.webp" alt="bulls">
+            <div class=" bg-black d-flex flex-column justify-content-center">
+                <p class="text-center fs-xs fw-normal px-3 mx-auto text-white ff-raleway  mw_555">
+                    We take a different balanced approach to finding and creating yield opportunities in the
+                    everchanging crypto market. Our yield strategies help users stay protected and hedged during bear
+                    markets and amplify yield during bull markets without resorting to leverage or other dangerous
+                    techniques.
+                </p>
+            </div>
+        </div>
+        <img class="w-100 img_cloud" src="./assets/images/webp/Clouds.webp" alt="Clouds">
     </div>
     <!-- slider -->
-    <div class="sample-bg position-relative pb-5  pt-93">
-        <div class="container pb-lg-5 ">
-            <div class="text-center ">
-                <h2 class="fs-3xl fw-bold font-neueregular text-white mb-0 ">Core Strategies</h2>
-                <p class="text-white  fw-normal mw-819 mx-auto text-center ff-raleway mt-4 mb-0"> Our initial strategies
-                    use
-                    powerful burgeoning trends
-                    like Real Yield, Rebase, and others to generate cutting- edged yield innovations. These yield
-                    strategies stretch beyond the drought in stable coins and set the value for our native protocol
-                    token $EEFI. Check them out! </p>
+    <div id="eefi" class="vault_bg  py_tokenomics">
+        <div class="container ">
+            <h2 class="text-white fs_xl fw-bold lh_sm text-center font-neuebold">Core Strategies</h2>
+            <div class="d-flex justify-content-center pt-4 align-items-center">
+                <p class="text-white opacity_50 lh_2xl fw-normal opacity_500 text-center mw_820">Our initial
+                    strategies use powerful
+                    burgeoning trends like Real Yield, Rebase, and others to generate cutting-edged yield innovations.
+                    These yield strategies stretch beyond the drought in stable coins and set the value for our native
+                    protocol token $EEFI. Check them out!'</p>
             </div>
-            <div class="slider">
-                <div class="row align-items-center pt-44 justify-content-center d-flex mb-5">
-                    <div class="col-md-6 col-xl-4 d-flex justify-content-center">
-                        <div class="slide-card">
-                            <div>
-                                <button
-                                    class="innovation-btn ff-raleway  fs-xs fw-normal text-white">Innovation</button>
+            <div class="slider pb-4 pb-lg-0">
+                <div class='row d-flex flex-wrap align-items-center pt-5 pb-4'>
+                    <div
+                        class='col-lg-6 d-flex justify-content-center align-items-center flex-column position-relative pb-3 pb-lg-0'>
+                        <div
+                            class='position-absolute d-flex justify-content-center align-items-center top-0 bottomb-0 start-0 end-0'>
+                        </div>
+                        <div class='vault_card'>
+                            <a href=''
+                                class='innovation_btn text-white ff_raleway fs_xs fw-normal lh_2xl'>Innovation</a>
+                            <div class='mt-4 d-flex justify-content-center'>
+                                <img src="./assets/images/webp/vault-circle.webp" alt="cord-circle">
                             </div>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <a href=""><svg width="283" height="283" viewBox="0 0 283 283" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g filter="url(#filter0_d_1_3107)">
-                                            <circle cx="141.5" cy="136.895" r="106.88" fill="#1643C3" fill-opacity="0.5"
-                                                shape-rendering="crispEdges" />
-                                        </g>
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M141.412 63.1226C140.632 64.9295 129.537 91.2503 116.757 121.614L93.521 176.82L87.1334 176.832L80.7458 176.843V181.62V186.398H99.7667H118.787V181.62V176.843H112.826C109.28 176.843 106.864 176.618 106.864 176.289C106.864 175.983 114.448 156.964 123.718 134.025C137.656 99.531 140.653 92.5536 141.045 93.6928C141.305 94.4504 147.982 113.406 155.883 135.816L170.246 176.562L162.686 176.719L155.126 176.875V181.636V186.398H178.689H202.252V181.62V176.843H196.964H191.676L167.929 119.658C154.867 88.2064 143.877 61.8805 143.505 61.1555C142.858 59.891 142.772 59.9708 141.412 63.1226Z"
-                                            fill="white" />
-                                        <defs>
-                                            <filter id="filter0_d_1_3107" x="0.612293" y="0.395782" width="281.775"
-                                                height="281.774" filterUnits="userSpaceOnUse"
-                                                color-interpolation-filters="sRGB">
-                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                                <feColorMatrix in="SourceAlpha" type="matrix"
-                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                                    result="hardAlpha" />
-                                                <feOffset dy="4.38798" />
-                                                <feGaussianBlur stdDeviation="17.0034" />
-                                                <feComposite in2="hardAlpha" operator="out" />
-                                                <feColorMatrix type="matrix"
-                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
-                                                <feBlend mode="normal" in2="BackgroundImageFix"
-                                                    result="effect1_dropShadow_1_3107" />
-                                                <feBlend mode="normal" in="SourceGraphic"
-                                                    in2="effect1_dropShadow_1_3107" result="shape" />
-                                            </filter>
-                                        </defs>
-                                    </svg></a>
+                            <div class='d-flex justify-content-between align-items-center pb-3 mt-2'>
+                                <p class='ff_raleway  fw-normal  text-white mb-0 lh_xl opacity_80'>Projected Yield (APY)
+                                </p>
+                                <p class='ff_inter fw-bold  blue mb-0 lh_xl '>7,777,777%</p>
                             </div>
-                            <div class="d-flex align-items-center justify-content-between pt-2">
-                                <p class="text-white opacity-80 fw-normal mb-0 ff-raleway">Projected Yield (APY)</p>
-                                <p class=" fw-bold blue ff-inter mb-0">7,777,777%</p>
+                            <div class='d-flex justify-content-between align-items-center position-relative pb-2'>
+                                <p class='ff_raleway  fw-normal text-white opacity_50 mb-0 lh_xl'>Current Deposits
+                                </p>
+                                <p class='ff_inter fw-medium  text-white mb-0 lh_xl'>0.00 AMPL</p>
                             </div>
-                            <div class="d-flex align-items-center justify-content-between pt-3">
-                                <p class="text-white opacity-50 mb-0 fw-normal ff-raleway">Current Deposits</p>
-                                <p class=" fw-medium text-white mb-0 ff-inter">0.00 AMPL</p>
-                            </div>
-                            <div class="line-card mt-3"></div>
-                            <div class="d-flex align-items-center justify-content-between pt-3">
-                                <p class="text-white  opacity-50 mb-0 fw-normal ff-raleway">Max Capacity</p>
-                                <p class=" fw-medium text-white mb-0 ff-inter">0.00 AMPL</p>
+                            <div class='vault_line'></div>
+                            <div class='d-flex justify-content-between align-items-center position-relative mt-2'>
+                                <p class='ff_raleway  fw-normal text-white opacity_50 mb-0 lh_xl'>Max Capacity</p>
+                                <p class='ff_inter fw-medium  text-white mb-0 lh_xl'>0.00 AMPL</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-12 col-xl-5 pt-4">
-                        <h2 class="fs_38 fw-normal font-neueregular text-white">Elastic Vault</h2>
-                        <div class="d-flex align-items-center">
-                            <p class="fs-xl fw-medium ff-raleway mb-4 text-white me-2">Deposit Token</p>
+                    <div
+                        class='pt-5 pt-lg-0 col-lg-6 col-12 d-flex justify-content-start align-items-start align-items-lg-center'>
+                        <div class='overflow-y-auto'>
+                            <div class=''>
+                                <h3 class='fw-normal mt-3 fs_2lg mb-0 lh_sm font-neueregular text-white  '>
+                                    Elastic Vault</h3>
+                                <div class='d-flex align-items-baseline mt_35 justify-content-lg-start  gap-2 mb-4'>
+                                    <p class='ff_raleway fs_md fw-medium text-white lh_lg mb-0 font-neueregular'>
+                                        Deposit Token</p>
+                                    <a href='#'>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.21 6.51183C10.35 6.37795 10.518 6.29614 10.7 6.29614C10.889 6.29614 11.05 6.37795 11.197 6.51183C11.33 6.66802 11.4 6.84652 11.4 7.03989C11.4 7.24071 11.33 7.41177 11.197 7.56796C11.05 7.70927 10.889 7.78364 10.7 7.78364C10.518 7.78364 10.35 7.70927 10.21 7.56796C10.077 7.41177 10 7.24071 10 7.03989C10 6.84652 10.077 6.66802 10.21 6.51183ZM8.46 9.99258C8.46 9.99258 9.979 8.71333 10.532 8.66127C11.05 8.61664 10.945 9.24883 10.896 9.57608L10.889 9.62071C10.791 10.0149 10.672 10.4909 10.553 10.9446C10.287 11.9784 10.028 12.9899 10.091 13.1758C10.161 13.4287 10.595 13.1089 10.91 12.8858C10.952 12.856 10.987 12.8263 11.022 12.804C11.022 12.804 11.078 12.7445 11.134 12.8263C11.148 12.8486 11.162 12.8709 11.176 12.8858C11.239 12.9899 11.274 13.0271 11.19 13.0866L11.162 13.1015C11.008 13.213 10.35 13.7039 10.084 13.8824C9.797 14.0832 8.698 14.7526 8.866 13.451C9.013 12.5362 9.209 11.7478 9.363 11.1305C9.65 10.0149 9.776 9.50914 9.132 9.94795C8.873 10.1116 8.719 10.2157 8.628 10.2826C8.551 10.3421 8.544 10.3421 8.495 10.2455L8.474 10.2008L8.439 10.1413C8.39 10.067 8.39 10.0595 8.46 9.99258ZM17 10.0149C17 14.1055 13.85 17.4524 10 17.4524C6.15 17.4524 3 14.1055 3 10.0149C3 5.92427 6.15 2.57739 10 2.57739C13.85 2.57739 17 5.92427 17 10.0149ZM16.3 10.0149C16.3 6.29614 13.7924 3.32114 10 3.32114C6.20761 3.32114 3.7 6.14739 3.7 10.0149C3.7 13.8824 6.62795 16.7086 10 16.7086C13.5777 16.7086 16.3 13.7336 16.3 10.0149Z"
+                                                fill="white" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p class='ff_raleway  fw-normal text-white opacity_50 mb-0 mb_20 lh_lg '>
+                                    $AMPL</p>
+                                <h2 class='ff_raleway fs_md fw-medium text-white lh_lg '>
+                                    Flagship Hedging Strategy</h2>
+                                <p class='ff_raleway fw-normal  text-white opacity_50  mw_440 mb-0 pb-3 lh_lg '>
+                                    This
+                                    one-of-a-kind strategy combines the benefits of Rebase’s force multiplier effect and
+                                    Real Yield’s sustainability.</p>
+                                <p class='ff_raleway fw-normal  text-white opacity_50 mw_440 mb-0 lh_lg '>
+                                    Helps users
+                                    to
+                                    protect against downtrends and amplify yield rewards during market up trends.</p>
+                            </div>
                         </div>
-                        <p class=" fw-normal mb-21 ff-raleway text-white">$AMPL</p>
-                        <p class="fs-xl fw-medium mb-21 ff-raleway text-white">Flagship Hedging Strategy</p>
-                        <div class="">
-                            <p class="text-white  mb-21 opacity-80 mw-420 fw-normal ff-raleway">This one-of-a-kind
-                                strategy
-                                combines
-                                the benefits of Rebase’s force multiplier effect and Real
-                                Yield’s sustainability.</p>
-                            <p class="text-white mb-0 opacity-80  mw-420 fw-normal ff-raleway">Helps users to protect
-                                against
-                                downtrends and amplify yield rewards during market up
-                                trends.</p>
-                        </div>
-
                     </div>
                 </div>
+                <div class='row d-flex flex-wrap align-items-center pt-5 pb-4'>
+                    <div
+                        class='col-lg-6 d-flex justify-content-center align-items-center flex-column position-relative pb-3 pb-lg-0'>
+                        <div
+                            class='position-absolute d-flex justify-content-center align-items-center top-0 bottomb-0 start-0 end-0'>
+                        </div>
+                        <div class='vault_card'>
+                            <a href=''
+                                class='innovation_btn text-white ff_raleway fs_xsm fw-normal lh_160'>Innovation</a>
+                            <div class='mt-4 olympus_img d-flex justify-content-center'>
+                                <img class="" src="/assets/images/webp/olympus.webp" alt="cord-circle">
+                            </div>
+                            <div class='d-flex justify-content-between align-items-center pb-3 mt-5 mt-md-2'>
+                                <p class='ff_raleway  fw-normal text-white mb-0 lh_xl opacity_80'>Projected Yield (APY)
+                                </p>
+                                <p class='ff_inter fw-bold  blue mb-0 lh_xl '>7,777,777%</p>
+                            </div>
+                            <div class='d-flex justify-content-between align-items-center position-relative pb-2'>
+                                <p class='ff_raleway  fw-normal text-white opacity_50 mb-0 lh_xl'>Current Deposits
+                                </p>
+                                <p class='ff_inter fw-medium  text-white mb-0 lh_xl'>0.00 AMPL</p>
+                            </div>
+                            <div class='vault_line'></div>
+                            <div class='d-flex justify-content-between align-items-center position-relative mt-2'>
+                                <p class='ff_raleway  fw-normal text-white opacity_50 mb-0 lh_xl'>Max Capacity</p>
+                                <p class='ff_inter fw-medium  text-white mb-0 lh_xl'>0.00 AMPL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class='pt-5 pt-lg-0 col-lg-6 col-12 d-flex justify-content-start align-items-start align-items-lg-center'>
+                        <div class='overflow-y-auto'>
+                            <div class=''>
+                                <h3 class='fw-normal mt-3 fs_2lg  font-neueregular text-white mb_35 '>
+                                    Olympus Bond Rewards Vault</h3>
+                                <div class='d-flex align-items-baseline gap-2 mb-4'>
+                                    <p class='ff_raleway fs_md fw-medium text-white lh_lg mb-0 font-neueregular'>
+                                        Yield Received: <span class="light-gray">$OHM, Other Bonds </span> </p>
 
+                                </div>
+                                <p class='ff_raleway  fw-normal text-white opacity_50 mb-0 pb-3 lh_lg '>
+                                    These vault strategies will enable users to participate in Olympus’ bond markets on
+                                    Bond Protocol and automatically earn $OHM rewards in addition to other tokens.</p>
+
+                                <p class='ff_raleway fw-normal  text-white opacity_50  mw_440 mb-0 pb-3 lh_lg '>
+                                    Bond Protocol markets for other token bonds will be enabled over time.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row d-flex flex-wrap align-items-center pt-5 pb-4'>
+                    <div
+                        class='col-lg-6 d-flex justify-content-center align-items-center flex-column position-relative pb-3 pb-lg-0'>
+                        <div
+                            class='position-absolute d-flex justify-content-center align-items-center top-0 bottomb-0 start-0 end-0'>
+                        </div>
+                        <div class='vault_card'>
+                            <a href=''
+                                class='innovation_btn text-white ff_raleway fs_xsm fw-normal lh_160'>Innovation</a>
+                            <div class='mt-4 d-flex justify-content-center'>
+                                <img class="olympus_img" src="/assets/images/webp/olympus.webp" alt="cord-olympus">
+                            </div>
+                            <div class='d-flex justify-content-between align-items-center pb-3 mt-md-2 mt-5'>
+                                <p class='ff_raleway  fw-normal text-white mb-0 lh_xl opacity_80'>Projected Yield (APY)
+                                </p>
+                                <p class='ff_inter fw-bold  blue mb-0 lh_xl '>7,777,777%</p>
+                            </div>
+                            <div class='d-flex justify-content-between align-items-center position-relative pb-2'>
+                                <p class='ff_raleway  fw-normal text-white opacity_50 mb-0 lh_xl'>Current Deposits
+                                </p>
+                                <p class='ff_inter fw-medium  text-white mb-0 lh_xl'>0.00 AMPL</p>
+                            </div>
+                            <div class='vault_line'></div>
+                            <div class='d-flex justify-content-between align-items-center position-relative mt-2'>
+                                <p class='ff_raleway  fw-normal text-white opacity_50 mb-0 lh_xl'>Max Capacity</p>
+                                <p class='ff_inter fw-medium  text-white mb-0 lh_xl'>0.00 AMPL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class='pt-5 pt-lg-0 col-lg-6 col-12 d-flex justify-content-start align-items-start align-items-lg-center'>
+                        <div class='overflow-y-auto'>
+                            <div class=''>
+                                <h3 class='fw-normal mt-3 fs_2lg  font-neueregular text-white mb_35 '>
+                                    Olympus Real Yield RBS Vault</h3>
+                                <div class='d-flex align-items-baseline gap-2 mb-4'>
+                                    <p class='ff_raleway  fw-medium text-white lh_lg mb-0 font-neueregular'>
+                                        Deposit Token <span class="light-gray">$OHM</span></p>
+
+                                </div>
+
+                                <div class='d-flex align-items-baseline gap-2 mb-4'>
+                                    <p class='ff_raleway  fw-medium text-white lh_lg mb-0 font-neueregular'>
+                                        Yield Received: <span class="light-gray">$OHM, $DAI </span></p>
+
+                                </div>
+
+
+                                <p class='ff_raleway fw-normal  text-white opacity_50 mw_440 mb-0 lh_lg '>
+                                    This strategy gives depositors a chance to participate in Olympus’s growing Real
+                                    Yield econOHMy. Similar to Forex market trading this vault will automatically
+                                    participate in Ranged-Bound Stability (RBS), an automated, decentralized mechanism
+                                    that helps $OHM to maintain its stability. Users can stake $OHM in exchange for $OHM
+                                    or $DAI rewards </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!-- tokenomics -->
-    <div id="Eefi">
+    <div id="team">
         <div class="d-lg-flex">
-            <div class="my_width pt-lg-5 mt-5 pb-5 mb-lg-5 bcg_graph">
-                <div class="custom-width mx-auto px-2 mt-lg-5 mb-5 pt-4">
-                    <h2 class="fs-3xl fw-bold font-neueubold text-black">EEFI
+            <div class="col_width pt-lg-5 mt-5 pb-5 mb-lg-5 toke_graph">
+                <div class="custom_width mx-lg-auto px-2 mt-lg-5 mb-5 pt-4">
+                    <h2 class="fs-xl  mb-20 fw-bold font-neueubold text-black">EEFI
                         Tokenomics</h2>
-                    <p class=" fw-normal ff-raleway text-black pt-1 pb-4">EEFI is the special rewards token of the
+                    <p class=" fw-normal ff-raleway  mw_448 text-black pt-1 ">EEFI is the special rewards token of the
                         protocol that is
-                        <span class="d-lg-block">minted and distributed in a decentralized fashion. It</span>
-                        <span class="d-lg-block">produces amplified yield during uptrends and protects from</span>
-                        <span class="d-lg-block">downside action during downtrends.</span>
+                        minted and distributed in a decentralized fashion. It
+                        produces amplified yield during uptrends and protects from
+                        downside action during downtrends.
                     </p>
-                    <button class=" fw-medium ff-raleway text-white bttn_view">View Contract Address</button>
-                    <p class="fa-1xl fw-bold mb-0 font-neueubold text-black pt-lg-5 pt-3">IBO TOKENOMICS</p>
-                    <p class="fs-md fw-bold mb-0 ff-raleway text-black pt-3">IBO Round 1 Price</p>
-                    <p class=" fw-semibold mb-0  ff-raleway blue-dark   pt-2">1
+                    <button class=" fw-medium mt_35 ff-raleway text-white view_btn">View Contract Address</button>
+                    <p class="fs-1xl lh_sm fw-bold mb-0 font-neueubold text-black pt-lg-5 mt-2">IBO TOKENOMICS</p>
+                    <p class="fs_sm lh_md fw-bold mb-0 ff-raleway text-black pt_30">IBO Round 1 Price</p>
+                    <p class=" fw-semibold lh_md mb-0  ff-raleway blue-dark   mt-2">1
                         EEFI = $12</p>
-                    <p class="fs-md fw-bold mb-0  ff-raleway text-black pt-3">
+                    <p class="fs_sm lh_md fw-bold mb-0  ff-raleway text-black mt-2">
                         IBO Round 2 Price</p>
-                    <p class=" fw-semibold mb-0  ff-raleway blue-dark  pt-2">
+                    <p class=" fw-semibold lh_md mb-0  ff-raleway blue-dark  mt-2">
                         1 EEFI = $18</p>
-                    <p class="fs-md fw-bold  mb-0 ff-raleway text-black pt-3">IBO Round 3 Price</p>
-                    <p class=" fw-semibold  mb-0 ff-raleway blue-dark  pt-2">
+                    <p class="fs_sm lh_md fw-bold  mb-0 ff-raleway text-black mt-2">IBO Round 3 Price</p>
+                    <p class=" fw-semibold lh_md  mb-0 ff-raleway blue-dark  mt-2">
                         1 EEFI = $26</p>
-                    <p class="fs-md fw-bold mb-0  ff-raleway text-black pt-3">
+                    <p class="fs_sm lh_md fw-bold mb-0  ff-raleway text-black mt-2">
                         TOTAL SUPPLY</p>
-                    <p class=" fw-semibold  mb-0 ff-raleway blue-dark text-black pt-2">
+                    <p class=" fw-semibold lh_md  mb-0 ff-raleway blue-dark text-black mt-2">
                         170,000</p>
                 </div>
             </div>
-            <div class="col_gradieant mw-738 ps-4 my_width pt-5">
-                <div class="pt-3 pt-lg-5 mt-lg-5 pb-5 pb-lg-0 bcg_graph custom-width-1">
-                    <div class="ps-5  pb-3 pb-lg-0">
+            <div class="col_gradieant mw_738 ps-md-4 col_width pt-5">
+                <div class="pt-3 pt-lg-5 mt-lg-5 pb-5 pb-lg-0 toke_graph custom_width_1">
+                    <div class=" pb-3 pb-lg-0">
                         <div class="d-flex align-items-center">
                             <a href=""><svg width="112" height="112" viewBox="0 0 112 112" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -301,11 +442,12 @@
                             </a>
                             <div class="ms-2 ms-lg-3">
                                 <p class="fa-1xl fw-bold font-neueregular text-white">Decentralized Yield</p>
-                                <p class=" ff-raleway fw-normal ">Protocol’s native utility | rewards token
+                                <p class=" ff-raleway fw-normal text-white opacity_80 ">Protocol’s native utility |
+                                    rewards token
                                 </p>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center mt-3">
+                        <div class="d-flex align-items-center mt-2">
                             <a href=""><svg width="112" height="112" viewBox="0 0 112 112" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_d_1469_1622)">
@@ -355,11 +497,12 @@
                             </a>
                             <div class="ms-2 ms-lg-3">
                                 <p class="fa-1xl fw-bold font-neueregular text-white">Extra Value</p>
-                                <p class=" ff-raleway fw-normal ">Can be highly deflationary during market
+                                <p class=" ff-raleway fw-normal text-white opacity_80 ">Can be highly deflationary
+                                    during market
                                     uptrends</p>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center mt-3">
+                        <div class="d-flex align-items-center mt-2">
                             <a href=""><svg width="112" height="112" viewBox="0 0 112 112" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_d_1469_1635)">
@@ -430,13 +573,14 @@
                             </a>
                             <div class="ms-2 ms-lg-3">
                                 <p class="fa-1xl fw-bold font-neueregular text-white">Smart Index</p>
-                                <p class=" ff-raleway fw-normal ">Token can be viewed as an index of all
+                                <p class=" ff-raleway fw-normal text-white opacity_80 ">Token can be viewed as an index
+                                    of all
                                     strategy
                                     <span class="d-block">performance on the protocol</span>
                                 </p>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center mt-3">
+                        <div class="d-flex align-items-center mt-2">
                             <a href=""><svg width="112" height="112" viewBox="0 0 112 112" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_d_1469_1655)">
@@ -485,7 +629,8 @@
                             </a>
                             <div class="ms-2 ms-lg-3">
                                 <p class="fa-1xl fw-bold font-neueregular text-white">Social Coordination (E,E)</p>
-                                <p class=" ff-raleway fw-normal ">Promotes hyper social coordination around
+                                <p class=" ff-raleway fw-normal text-white opacity_80 ">Promotes hyper social
+                                    coordination around
                                     all
                                     <span class="d-block">strategies on the protocol (E,E) ( makes hedging fun
                                         and</span>
@@ -494,7 +639,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center mt-3">
+                        <div class="d-flex align-items-center mt-2">
                             <a href=""><svg width="112" height="112" viewBox="0 0 112 112" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_d_1469_1666)">
@@ -552,7 +697,8 @@
                             </a>
                             <div class="ms-2 ms-lg-3">
                                 <p class="fa-1xl fw-bold font-neueregular text-white">Expansive Utility Dimensions</p>
-                                <p class=" ff-raleway fw-normal ">EEFI’s utility will expand as more
+                                <p class=" ff-raleway fw-normal text-white opacity_80 ">EEFI’s utility will expand as
+                                    more
                                     strategies are
                                     <span class="d-block">added to the protocol.</span>
                                 </p>
@@ -564,21 +710,28 @@
         </div>
     </div>
     ,
-    <script src="./assets/js/app.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="path/to/slick.min.js"></script>
+    <!-- <script src="./assets/js/app.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script> <!-- slick-slider cdn-link -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('.slider').slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: 3000
-            });
+        document.getElementById("menuIcon").addEventListener("click", function () {
+            this.classList.toggle("crossline1");
+            document.querySelector(".nav_bar").classList.toggle("left_false");
+            document.querySelector(".nav_bar").classList.toggle("left_true");
+            document.querySelector(".nav_bar").classList.toggle("d-none");
+        });
+    </script>
+    <script>
+        $('.slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
         });
     </script>
 </body>

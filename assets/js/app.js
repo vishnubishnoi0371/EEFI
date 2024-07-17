@@ -14,14 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-$('.slider').slick({
-    dots: true,
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-});
 
 document.getElementById("menuIcon").addEventListener("click", function () {
     this.classList.toggle("crossline1");

@@ -372,7 +372,13 @@ body{
     backdrop-filter: blur(9.5px);
   }
 
+  .view_btn:hover{
+    background: var(--blue-dark);
+    border: 1px solid white;
+color: var(--blue-dark) !important;
+  }
   .view_btn{
+    border: 1px var(--blue-dark);
     background: linear-gradient(93deg, #1643C3 10.24%, #369EFE 208.68%);
     padding: 17px 16px;
     border: none;
@@ -545,6 +551,10 @@ body{
       }
   }
   @media (min-width:768px) {
+    :root{
+      --fs-6xl: 72px;
+
+    }
     .mw_tokenomics{
       max-width: 340px;
     }

@@ -3,6 +3,7 @@
 /*-------------------root------------------*/
 :root {
     /*=========font-size========*/
+    --fs-xxs: 12px;
     --fs-xs: 14px;
     --fs-sm: 18px;
     --fs_md: 22px;
@@ -24,6 +25,7 @@
   
     /*---------color---------*/
     --blue-dark: #1643C3;
+    --blue-primary: #012c9e;
     --blue:#4878FF;
     --black: #000;
     --light-gray: #cfd5e7;
@@ -67,6 +69,9 @@ body{
 .blue {
     color: var(--blue);
 }
+.blue-primary {
+    color: var(--blue-primary);
+}
 .light-gray {
     color: var(--light-gray);
 }
@@ -78,6 +83,9 @@ body{
     background: var(--black);
 }
 
+  .fs_xxs {
+    font-size: var(--fs-xxs);
+  }
   .fs_xs {
     font-size: var(--fs-xs);
   }
@@ -261,6 +269,9 @@ body{
 
   
 /*--header-*/
+.my_container{
+  max-width: 1140px !important;
+}
 .hero_bg {
     background-image: url(/assets/images/webp/header-bg.webp);
     background-size: cover;
@@ -288,9 +299,9 @@ body{
   }
   .nav_btn {
     padding: 10.5px 29.5px;
-    border: 2px solid var(--blue);
+    border: 2px solid var(--blue-dark);
     border-radius: 8px;
-    color: var(--blue);
+    color: var(--blue-dark);
     transition: all 300ms linear;
     position: relative;
     z-index: 5;
@@ -334,7 +345,7 @@ body{
   .img_cloud{
     z-index: 2;
     position: absolute;
-    bottom: -11%;
+    bottom: -7%;
   }
   .mw_555{
     max-width: 555px;
@@ -347,7 +358,7 @@ body{
 /* tokononics */
 
 .py_tokenomics {
-    padding-top: 108px;
+    padding-top: 78px;
     padding-bottom: 92px;
   }
 
@@ -483,7 +494,7 @@ color: var(--blue-dark) !important;
         width: 10.334px;
         height: 10.324px;
         border-radius: 20px;
-        background-color: var(--blue);
+        background-color: var(--blue-primary);
       }
       
       .blue_dots_set {
@@ -508,7 +519,7 @@ color: var(--blue-dark) !important;
       --fs-2md: 22px;
       --fs-lg: 38px;
       --fs-4lg: 46px;
-      --fs-xl: 52px;
+      --fs-sxl: 52px;
       --fs-xxl: 55px !important;
     }
   
@@ -533,24 +544,29 @@ color: var(--blue-dark) !important;
       width: 100%;
     }
     .toke_svg{
-      width: 112px;
-      height: 112px;
+      width: 112px !important;
+      height: 112px !important;
     }
     :root {
         --fs-6xl: 85px;
-        --fs-xl: 52px;
+        --fs-sxl: 52px;
 
     }
     .img_cloud{
       z-index: 2;
       position: absolute;
-      bottom: -11% !important;
+      bottom: -9% !important;
     }
       .col_width{
         width: 50%;
       }
   }
   @media (min-width:768px) {
+    .py_tokenomics {
+      padding-top: 158px;
+      padding-bottom: 92px;
+    }
+  
     :root{
       --fs-6xl: 72px;
 

@@ -56,7 +56,7 @@ body{
   }
   
   .lh_sm {
-    line-height: var(--fs-sm);
+    line-height: var(--lh-sm);
   }
   
   .lh_5md {
@@ -358,7 +358,7 @@ body{
   .audited_bottom_line::after {
     position: absolute;
     content: "";
-    width: 178px;
+    width: 100%;
     height: 1px;
     background-color: white;
     bottom: 4px;
